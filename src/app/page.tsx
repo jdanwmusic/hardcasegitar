@@ -11,32 +11,34 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink">
-        <div className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-32 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-amber mb-5">
-              <Sparkles className="w-3.5 h-3.5" /> Hardcase custom Indonesia
+        <div className="mx-auto max-w-6xl px-5 pt-10 pb-10 md:pt-24 md:pb-32">
+          <div className="grid md:grid-cols-2 md:gap-12 items-center">
+          <div className="order-2 md:order-1">
+            <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-amber mb-4 md:mb-6">
+              <Sparkles className="w-3 h-3" /> Hardcase custom Indonesia
             </span>
-            <h1 className="font-display text-5xl md:text-6xl leading-[1.05] text-cream tracking-tight mb-6">
-              Perlindungan<br />
-              <span className="text-amber">tanpa kompromi</span><br />
-              untuk instrumen Anda.
+            <h1 className="font-display text-[2rem] md:text-6xl leading-[1.08] text-cream tracking-tight mb-4 md:mb-6">
+              Perlindungan <span className="text-amber">tanpa kompromi.</span>
             </h1>
-            <p className="text-base md:text-lg text-muted max-w-md leading-relaxed mb-8">
-              Hardcase & flightcase custom yang dibuat sesuai bentuk dan ukuran instrumen Anda — gitar, bass, efek, hingga keyboard. Presisi, kokoh, dan siap menemani tur.
+            <p className="text-sm md:text-lg text-muted max-w-md leading-relaxed mb-6 md:mb-8">
+              Hardcase & flightcase custom yang dibuat sesuai bentuk instrumen Anda.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a href={getWhatsAppLink()} target="_blank" rel="noreferrer"
-                 className="inline-flex items-center gap-2 bg-amber text-ink font-medium px-5 py-3 rounded-[9999px] hover:bg-amberLight transition-colors text-sm">
-                <MessageCircle className="w-4 h-4" /> Konsultasi WhatsApp
+                 className="inline-flex items-center justify-center gap-2 bg-amber text-ink font-semibold px-6 py-3.5 rounded-[9999px] hover:bg-amberLight transition-colors text-sm">
+                <MessageCircle className="w-4 h-4" />
+                <span>Konsultasi WhatsApp</span>
               </a>
-              <Link href="#produk" className="inline-flex items-center gap-2 border border-border text-cream px-5 py-3 rounded-[9999px] hover:border-amber transition-colors text-sm">
+              <Link href="#produk" className="inline-flex items-center justify-center gap-2 border border-border text-cream px-6 py-3.5 rounded-[9999px] hover:border-amber transition-colors text-sm">
                 Lihat Produk <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+            <p className="text-xs text-muted/70 mt-3 hidden sm:block">Konsultasi ukuran & kebutuhan Anda</p>
           </div>
-          <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-surface shadow-[0_25px_50px_rgba(0,0,0,0.35)]">
+          <div className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[4/3] rounded-xl overflow-hidden bg-surface shadow-[0_20px_45px_rgba(0,0,0,0.4)] mb-6 md:mb-0">
             <Image src="/assets/case-elektrik-xrf-1.jpg" alt="Hardcase elektrik" fill priority className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-ink/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" />
+          </div>
           </div>
         </div>
       </section>
