@@ -36,7 +36,7 @@ export default function HomePage() {
             <p className="text-xs text-muted/70 mt-3 hidden sm:block">Konsultasi ukuran & kebutuhan Anda</p>
           </div>
           <div className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[4/3] rounded-xl overflow-hidden bg-surface shadow-[0_20px_45px_rgba(0,0,0,0.4)] mb-6 md:mb-0">
-            <Image src="/assets/case-elektrik-xrf-1.jpg" alt="Hardcase elektrik" fill priority className="object-cover" />
+            <Image src="/assets/case-elektrik-xrf-1.jpg" alt="Hardcase elektrik" fill priority loading="eager" fetchPriority="high" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" />
           </div>
           </div>
@@ -73,7 +73,7 @@ export default function HomePage() {
           {categories.map(([key, cat]) => (
             <Link key={key} href={`/kategori/${key}`} className="group">
               <div className="relative aspect-square rounded-xl overflow-hidden bg-card border border-border group-hover:border-amber transition-colors">
-                <Image src={`/assets/${cat.image}`} alt={cat.label} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <Image src={`/assets/${cat.image}`} alt={cat.label} fill className="object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3">
                   <div className="text-cream text-sm font-medium">{cat.label}</div>
@@ -100,7 +100,7 @@ export default function HomePage() {
             {featured.slice(0, 6).map((p) => (
               <article key={p.id} className="bg-card rounded-2xl overflow-hidden border border-border group">
                 <div className="relative aspect-[4/3] bg-ink">
-                  <Image src={`/assets/${p.images[0]}`} alt={p.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <Image src={`/assets/${p.images[0]}`} alt={p.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                   <div className="absolute top-3 left-3 inline-flex items-center gap-1 bg-amber/90 text-ink text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full">
                     Custom
                   </div>
@@ -137,7 +137,7 @@ export default function HomePage() {
           </ul>
         </div>
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface">
-          <Image src="/assets/case-flightcase-alu-1.jpg" alt="Flightcase workshop" fill className="object-cover" />
+          <Image src="/assets/case-flightcase-alu-1.jpg" alt="Flightcase workshop" fill loading="lazy" className="object-cover" />
         </div>
       </section>
 
