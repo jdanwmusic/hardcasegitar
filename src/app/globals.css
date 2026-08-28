@@ -4,5 +4,50 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', system-ui, sans-serif; background: #0f0f12; color: #F2EFEA; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #08080A; color: #EAEAE0; }
+}
+
+/* Strong visual system — PREMIUM + STRONG + PROTECTIVE + INDUSTRIAL */
+@layer components {
+  /* Primary CTA — SOLID, HEAVY, CONFIDENT */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-[#B8943A] px-8 py-3.5 font-semibold text-[#08080A] no-underline shadow-lg transition-colors duration-200 hover:bg-[#E8C06A];
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* Secondary CTA — dark, defined */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-[#8A6E2E] bg-transparent px-8 py-3.5 font-semibold text-[#EAEAE0] no-underline transition-colors duration-200 hover:border-[#E8C06A] hover:text-[#E8C06A];
+  }
+
+  /* Card — industrial, defined border, no gloss */
+  .card {
+    @apply rounded-xl border border-[#2A2A2E] bg-[#1E1E24] p-6 shadow-xl;
+  }
+  .card-hover {
+    @apply card transition-colors duration-200 hover:border-[#8A6E2E];
+  }
+
+  /* Product image frame — protective housing feel */
+  .product-frame {
+    @apply overflow-hidden rounded-lg border border-[#2A2A2E] bg-[#121215];
+  }
+
+  /* Text hierarchy */
+  .text-heading { @apply text-[#FFFFFF] font-bold tracking-tighter; }
+  .text-body { @apply text-[#EAEAE0] font-normal leading-relaxed; }
+  .text-muted { @apply text-[#888883] font-normal; }
+  .text-accent { @apply text-[#B8943A]; }
+  .text-accent-bright { @apply text-[#E8C06A]; }
+
+  /* Gold accent line — hardware signature */
+  .accent-line {
+    @apply h-1 w-12 rounded-full bg-[#B8943A];
+  }
+
+  /* Section surface */
+  .section-surface {
+    @apply bg-[#121215] text-[#EAEAE0];
+  }
 }
