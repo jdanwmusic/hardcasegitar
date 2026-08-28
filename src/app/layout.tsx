@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/case-elektrik-xrf-1.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/assets/case-elektrik-xrf-1.avif" as="image" type="image/avif" />
         <link rel="dns-prefetch" href="//wa.me" />
       </head>
       <body>

@@ -36,7 +36,7 @@ export default function HomePage() {
             <p className="text-xs text-muted/70 mt-3 hidden sm:block">Konsultasi ukuran & kebutuhan Anda</p>
           </div>
           <div className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[4/3] rounded-xl overflow-hidden bg-surface shadow-[0_20px_45px_rgba(0,0,0,0.4)] mb-6 md:mb-0">
-            <Image src="/assets/case-elektrik-xrf-1.jpg" alt="Hardcase elektrik" fill priority loading="eager" fetchPriority="high" className="object-cover" />
+            <Image src="/assets/case-elektrik-xrf-1.avif" alt="Hardcase elektrik" fill priority loading="eager" fetchPriority="high" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" />
           </div>
           </div>
@@ -137,7 +137,7 @@ export default function HomePage() {
           </ul>
         </div>
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface">
-          <Image src="/assets/case-flightcase-alu-1.jpg" alt="Flightcase workshop" fill loading="lazy" className="object-cover" />
+          <Image src="/assets/case-flightcase-alu-1.avif" alt="Flightcase workshop" fill loading="lazy" className="object-cover" />
         </div>
       </section>
 
