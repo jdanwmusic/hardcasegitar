@@ -334,6 +334,18 @@ export const PRODUCTS: Product[] = [
     features: ['Ergonomic handle', 'Metal latch + lock', 'Aluminum edge', 'Professional grade'],
     price: undefined, status: 'custom',
   },
+  {
+    id: 'c-04', slug: 'hardcase-mang-eci-cajon',
+    name: 'Hardcase — MANG ECI CAJON',
+    tagline: 'Hardcase hitam untuk perlindungan instrumen. Label: MANG ECI CAJON.',
+    category: 'custom',
+    images: ['hardcase-mang-eci-cajon.jpg'],
+    description: 'Hardcase hitam dengan label MANG ECI CAJON (terlihat pada foto). Kondisi: baru / baik. Tidak ada spesifikasi teknis (dimensi, material foam, berat) yang tersedia dari visual — hanya foto ini yang tersedia sebagai referensi.',
+    compatibility: ['Tidak dicantumkan — perlu konfirmasi'],
+    features: ['Hardcase hitam', 'Metal latch', 'Label MANG ECI CAJON (visual)', 'Foto asli (bukan render)'],
+    price: undefined, status: 'custom',
+  },
+
 ]
 
 export const WHATSAPP_NUMBER = '6287748514337'
