@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hardcase Guitar
+
+Website penyewaan & produksi hardcase & flightcase custom untuk gitar, bass, efek, dan instrumen musik. Dibuat sesuai bentuk & ukuran instrumen Anda. Pengiriman seluruh Indonesia.
+
+## Tech Stack
+
+- **Framework**: Next.js 14.2.0 (App Router, Static Export)
+- **Styling**: Tailwind CSS 3.4.0
+- **Language**: TypeScript
+- **Icons**: lucide-react
+- **Font**: Inter + Playfair Display (Google Fonts)
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout + metadata
+│   ├── page.tsx            # Homepage
+│   ├── [slug]/page.tsx     # Product detail pages
+│   ├── kategori/[category]/page.tsx  # Category pages
+│   └── globals.css         # Tailwind + base styles
+├── components/
+│   ├── Header.tsx          # Sticky header + mobile menu
+│   └── Footer.tsx          # Footer + contact
+└── data/
+    └── products.ts         # Product catalog + WhatsApp links
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # Development server on port 3001
+npm run build    # Static export to /out
+npm start        # Serve static build on port 3001
+npm run lint     # Run ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Project ini menggunakan Next.js static export (`output: 'export'`). Hasil build ada di folder `out/`. Langsung deploy ke berapapun yang melayani static file (Nginx, Cloudflare Pages, Vercel, dll).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Untuk menghasilkan sitemap & robots.txt yang akurat, update `public/sitemap.xml` dan `public/robots.txt` sesuai domain production.
 
-## Learn More
+## Data Produk
 
-To learn more about Next.js, take a look at the following resources:
+Data produk ada di `src/data/products.ts`. Struktur:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+{
+  id: string
+  slug: string
+  name: string
+  tagline: string
+  category: 'elektrik' | 'akustik' | 'bass' | 'travel' | 'silent' | 'effects' | 'flightcase' | 'custom'
+  images: string[]   // nama file di /public/assets/
+  description: string
+  compatibility: string[]
+  features: string[]
+  price?: string     // opsional
+  status: 'ready' | 'custom' | 'preorder'
+  featured?: boolean
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+WhatsApp number di `WHATSAPP_NUMBER` (6287748514337). Edit di `src/data/products.ts` jika perlu.
 
-## Deploy on Vercel
+## Lisensi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private — hak cipta Hardcase Guitar.

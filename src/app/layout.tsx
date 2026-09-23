@@ -10,24 +10,35 @@ export const metadata: Metadata = {
   },
   description: 'Produsen hardcase & flightcase custom untuk gitar, bass, efek, dan instrumen musik. Dibuat sesuai bentuk & ukuran instrumen Anda. Pengiriman seluruh Indonesia.',
   keywords: ['hardcase', 'flightcase', 'gitar', 'bass', 'custom case', 'Indonesia'],
+  metadataBase: new URL('https://hardcasegitar.com'),
   openGraph: {
     type: 'website',
     locale: 'id_ID',
     url: 'https://hardcasegitar.com',
     siteName: 'Hardcase Guitar',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hardcase Guitar — Hardcase & Flightcase Custom Indonesia',
+      },
+    ],
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" href="/assets/case-elektrik-xrf-1.avif" as="image" type="image/avif" />
-        <link rel="dns-prefetch" href="//wa.me" />
-      </head>
-      <body>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//wa.me" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="canonical" href="https://hardcasegitar.com" />
+      <body className="font-body">
         <Header />
         <main>{children}</main>
         <Footer />
