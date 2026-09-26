@@ -25,7 +25,11 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+  icons: {
+    icon: '/hardcase-icon.svg',
+    apple: '/hardcase-icon.svg',
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
